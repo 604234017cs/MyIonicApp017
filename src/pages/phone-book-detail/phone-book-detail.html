@@ -6,18 +6,21 @@
 -->
 <ion-header>
   <ion-navbar>
-    <ion-title>PhoneBookDetail</ion-title>
+    <ion-title>{{contact.name}}</ion-title>
   </ion-navbar>
 </ion-header>
 
 <ion-content padding>
-    
-        <img src="{{contact.imageUrl}} " alt="" width="150" height="150">
-      <button ion-button block color= "secondary"> <ion-icon name="call"></ion-icon>&nbsp;  Call : {{contact.telephone}} </button>
-  
-      <button ion-button block colar="primary"><ion-icon name="mail"></ion-icon>&nbsp; SMS : {{contact.telephone}}</button>
-     
 
-   
+  <img src="{{contact.imageUrl}} " alt="" width="150" height="150">
+  <button ion-button  color="secondary" block (click)="call()">
+    <ion-icon name="call"></ion-icon>&nbsp; Call : {{contact.telephone}}
+  </button>
+  <button ion-button  colar="primary" block (click)="sms()">
+    <ion-icon name="mail"></ion-icon>&nbsp; SMS : {{contact.telephone}}
+  </button>
 
-  </ion-content>
+
+
+
+</ion-content>

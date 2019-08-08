@@ -24,7 +24,8 @@ export class MyApp {
     this.pages = [
       { title: 'Home', component: HomePage, icon: 'home' },
       { title: 'List', component: ListPage, icon: 'folder-open' },
-      { title: 'Login', component: LoingPage, icon: 'key' }
+      { title: 'Login', component: LoingPage, icon: 'key' },
+      { title: 'BarcodeScanner', component: LoingPage, icon: 'barcode' }
     ];
 
   }

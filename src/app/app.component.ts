@@ -6,6 +6,8 @@ import { SplashScreen } from '@ionic-native/splash-screen';
 
 import { HomePage } from '../pages/home/home';
 import { ListPage } from '../pages/list/list';
+import { BarcodeScannerPage } from '../pages/barcode-scanner/barcode-scanner';
+import { FlashlightPage } from '../pages/flashlight/flashlight';
 
 @Component({
   templateUrl: 'app.html'
@@ -25,7 +27,9 @@ export class MyApp {
       { title: 'Home', component: HomePage, icon: 'home' },
       { title: 'List', component: ListPage, icon: 'folder-open' },
       { title: 'Login', component: LoingPage, icon: 'key' },
-      { title: 'BarcodeScanner', component: LoingPage, icon: 'barcode' }
+      { title: 'BarcodeScanner', component: BarcodeScannerPage, icon: 'barcode' },
+      { title: 'Flashlight', component: FlashlightPage, icon: 'flash' }
+
     ];
 
   }

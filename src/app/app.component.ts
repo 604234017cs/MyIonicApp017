@@ -8,6 +8,7 @@ import { HomePage } from '../pages/home/home';
 import { ListPage } from '../pages/list/list';
 import { BarcodeScannerPage } from '../pages/barcode-scanner/barcode-scanner';
 import { FlashlightPage } from '../pages/flashlight/flashlight';
+import { JsonMenuPage } from '../pages/json-menu/json-menu';
 
 @Component({
   templateUrl: 'app.html'
@@ -28,7 +29,8 @@ export class MyApp {
       { title: 'List', component: ListPage, icon: 'folder-open' },
       { title: 'Login', component: LoingPage, icon: 'key' },
       { title: 'BarcodeScanner', component: BarcodeScannerPage, icon: 'barcode' },
-      { title: 'Flashlight', component: FlashlightPage, icon: 'flash' }
+      { title: 'Flashlight', component: FlashlightPage, icon: 'flash' },
+      { title: 'Json Menu', component: JsonMenuPage, icon: 'hand' }
 
     ];
 

@@ -1,3 +1,4 @@
+import { JsonMenuPage } from './../pages/json-menu/json-menu';
 import { FlashlightPage } from './../pages/flashlight/flashlight';
 import { BarcodeScannerPage } from './../pages/barcode-scanner/barcode-scanner';
 import { BrowserModule } from '@angular/platform-browser';
@@ -18,7 +19,7 @@ import { Flashlight } from '@ionic-native/flashlight';
 @NgModule({
   declarations: [
     MyApp,
-    HomePage,BarcodeScannerPage,FlashlightPage,
+    HomePage,BarcodeScannerPage,FlashlightPage,JsonMenuPage,
     ListPage,LoingPage
   ],
   imports: [
@@ -29,7 +30,7 @@ import { Flashlight } from '@ionic-native/flashlight';
   entryComponents: [
     MyApp,
     HomePage,
-    ListPage,LoingPage,BarcodeScannerPage,FlashlightPage,
+    ListPage,LoingPage,BarcodeScannerPage,FlashlightPage,JsonMenuPage
   ],
   providers: [
     StatusBar,SMS,BarcodeScanner,Flashlight,

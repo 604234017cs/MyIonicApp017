@@ -1,3 +1,4 @@
+import { MovieAppPage } from './../pages/movie-app/movie-app';
 import { LoingPage } from './../pages/login/loing';
 import { Component, ViewChild } from '@angular/core';
 import { Nav, Platform } from 'ionic-angular';
@@ -30,7 +31,8 @@ export class MyApp {
       { title: 'Login', component: LoingPage, icon: 'key' },
       { title: 'BarcodeScanner', component: BarcodeScannerPage, icon: 'barcode' },
       { title: 'Flashlight', component: FlashlightPage, icon: 'flash' },
-      { title: 'Json Menu', component: JsonMenuPage, icon: 'hand' }
+      { title: 'Json Menu', component: JsonMenuPage, icon: 'hand' },
+      { title: 'Movie App', component: MovieAppPage, icon: 'logo-youtube' }
 
     ];
 

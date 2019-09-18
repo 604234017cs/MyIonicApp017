@@ -17,6 +17,7 @@ import { LoingPage } from '../pages/login/loing';
 import { SMS } from '@ionic-native/sms/ngx';
 import { BarcodeScanner } from '@ionic-native/barcode-scanner';
 import { Flashlight } from '@ionic-native/flashlight';
+import { MovieProvider } from '../providers/movie/movie';
 
 @NgModule({
   declarations: [
@@ -38,7 +39,8 @@ import { Flashlight } from '@ionic-native/flashlight';
   providers: [
     StatusBar,SMS,BarcodeScanner,Flashlight,
     SplashScreen,
-    {provide: ErrorHandler, useClass: IonicErrorHandler}
+    {provide: ErrorHandler, useClass: IonicErrorHandler},
+    MovieProvider
   ]
 })
 export class AppModule {}

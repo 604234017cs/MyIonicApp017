@@ -5,28 +5,35 @@
   Ionic pages and navigation.
 -->
 <ion-header>
-    <ion-navbar>
-      <ion-title text-center>MovieApp </ion-title>
+  <ion-navbar>
+    <button ion-button menuToggle>
+      <ion-icon name="menu"></ion-icon>
+    </button>
+    <ion-title text-center>MovieApp </ion-title>
+    <ion-buttons end>
+      <button ion-button icon-only>
+          <ion-icon name="contact"></ion-icon> 
+        </button>
+    </ion-buttons>
   </ion-navbar>
 </ion-header>
 
-
-
 <ion-content padding>
-  <ion-card color = "dark">
+  <ion-card color="dark">
     <ion-card-header>
-        All About Movie
+      All About Movie
     </ion-card-header>
-    
   </ion-card>
-  <ion-card>
+
+  <ion-card (click)="NowPlaying()">
     <ion-list>
-      <ion-item>
+      <ion-item  >
         <ion-thumbnail item-start>
-          <img src="">
+          <img src="assets/imgs/1.jpg">
         </ion-thumbnail>
         <h2>Now</h2>
         <p>Now Playing &nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </p>
+        <ion-icon item-right name="arrow-dropright-circle"></ion-icon>
       </ion-item>
     </ion-list>
   </ion-card>
@@ -34,24 +41,38 @@
 
   <ion-card>
     <ion-list>
-      <ion-item>
+      <ion-item (click)="UpComing()">
         <ion-thumbnail item-start>
-          <img src="">
+          <img src="assets/imgs/222.png">
         </ion-thumbnail>
         <h2>Upcoming</h2>
         <p>Upcoming Movie &nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </p>
+        <ion-icon item-right name="arrow-dropright-circle"></ion-icon>
       </ion-item>
     </ion-list>
   </ion-card>
 
   <ion-card>
     <ion-list>
-      <ion-item>
+      <ion-item (click)="Popular()">
         <ion-thumbnail item-start>
-          <img src="">
+          <img src="assets/imgs/3.png">
         </ion-thumbnail>
         <h2>Popular</h2>
         <p>Popular Movie &nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </p>
+        <ion-icon item-right name="arrow-dropright-circle"></ion-icon>
+      </ion-item>
+    </ion-list>
+  </ion-card>
+
+  <ion-card>
+    <ion-list>
+      <ion-item (click)="TopRated()">
+        <ion-thumbnail item-start><img src="assets/imgs/4.jpg">
+        </ion-thumbnail>
+        <h2>TopRated</h2>
+        <p>TopRated Movie &nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </p>
+        <ion-icon item-right name="arrow-dropright-circle"></ion-icon>
       </ion-item>
     </ion-list>
   </ion-card>

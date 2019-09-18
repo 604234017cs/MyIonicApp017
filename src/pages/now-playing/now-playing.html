@@ -1,0 +1,30 @@
+<!--
+  Generated template for the NowPlayingPage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+  <ion-navbar>
+
+    <ion-title text-center>NowPlaying</ion-title>
+    <ion-buttons start (click)=MovieApp()>
+      <button ion-button icon-only>
+        <ion-icon name="home"></ion-icon>
+      </button>
+    </ion-buttons>
+    
+  </ion-navbar>
+</ion-header>
+<ion-content padding>
+  <ion-item *ngFor="let nowmovie of movieArray"
+   (click)="Moviedetail(nowmovie)">
+
+    <div item-left>
+      <img src="{{imgPath + nowmovie.poster_path}}" style="display: block; width: 90px; height:120px; ">
+    </div>
+<h2>{{nowmovie.title}}</h2>
+<p>Release:{{nowmovie.release_date}}</p>
+  </ion-item>
+
+</ion-content>

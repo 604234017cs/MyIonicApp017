@@ -1,6 +1,7 @@
 import { MovieProvider } from './../../providers/movie/movie';
 import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
+import { MovieAppPage } from '../movie-app/movie-app';
 
 /**
  * Generated class for the NowPlayingPage page.
@@ -34,7 +35,11 @@ export class NowPlayingPage {
     }) ;
   }
 
-  Moviedetail(nowmovie){
-    this.navCtrl.push("MovieDetailPage",nowmovie);
+      Moviedetail(nowmovie){
+        this.navCtrl.push("MovieDetailPage",nowmovie);
+  }
+
+  MovieApp(){
+    this.navCtrl.push(MovieAppPage);
   }
 }

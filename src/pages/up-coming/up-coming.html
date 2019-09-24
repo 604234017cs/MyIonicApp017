@@ -7,6 +7,8 @@
 <ion-header>
   <ion-navbar>
     <ion-title>UpComing</ion-title>
+  
+
     <ion-buttons start (click)=MovieApp()>
         <button ion-button icon-only>
           <ion-icon name="home"></ion-icon>
@@ -20,10 +22,10 @@
     (click)="Moviedetail(UpComing)">
  
      <div item-left>
-       <img src="{{imgPath + upcoming.poster_path}}" style="display: block; width: 90px; height:120px; ">
+       <img src="{{imgPath + UpComing.poster_path}}" style="display: block; width: 90px; height:120px; ">
      </div>
- <h2>{{upcoming.title}}</h2>
- <p>Release:{{upcoming.release_date}}</p>
+ <h2>{{UpComing.title}}</h2>
+ <p>Release:{{UpComing.release_date}}</p>
    </ion-item>
 
 </ion-content>

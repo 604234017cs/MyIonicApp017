@@ -6,7 +6,7 @@ import { BarcodeScannerPage } from './../pages/barcode-scanner/barcode-scanner';
 import { BrowserModule } from '@angular/platform-browser';
 import { ErrorHandler, NgModule } from '@angular/core';
 import { IonicApp, IonicErrorHandler, IonicModule } from 'ionic-angular';
-
+import { VideoPlayer } from '@ionic-native/video-player';
 import { MyApp } from './app.component';
 import { HomePage } from '../pages/home/home';
 import { ListPage } from '../pages/list/list';
@@ -18,6 +18,7 @@ import { SMS } from '@ionic-native/sms/ngx';
 import { BarcodeScanner } from '@ionic-native/barcode-scanner';
 import { Flashlight } from '@ionic-native/flashlight';
 import { MovieProvider } from '../providers/movie/movie';
+
 
 @NgModule({
   declarations: [
@@ -34,11 +35,11 @@ import { MovieProvider } from '../providers/movie/movie';
   entryComponents: [
     MyApp,
     HomePage,
-    ListPage,LoingPage,BarcodeScannerPage,FlashlightPage,JsonMenuPage,MovieAppPage
+    ListPage,LoingPage,BarcodeScannerPage,FlashlightPage,JsonMenuPage,MovieAppPage,
   ],
   providers: [
     StatusBar,SMS,BarcodeScanner,Flashlight,
-    SplashScreen,
+    SplashScreen,VideoPlayer,
     {provide: ErrorHandler, useClass: IonicErrorHandler},
     MovieProvider
   ]

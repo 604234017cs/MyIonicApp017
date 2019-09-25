@@ -9,7 +9,7 @@
 
     <ion-title text-center>NowPlaying</ion-title>
 
-    <ion-buttons start >
+    <ion-buttons start>
       <button ion-button icon-only (click)="MovieApp()">
         <ion-icon name="home"></ion-icon>
       </button>
@@ -20,16 +20,16 @@
 
 <ion-content padding>
 
-    <ion-searchbar (ionInput)="getItems($event)"></ion-searchbar>
-  
+  <ion-searchbar (ionInput)="getItems($event)"></ion-searchbar>
 
-  <ion-item *ngFor="let nowmovie of movieArray" (click)="Moviedetail(nowmovie)">
+<ion-item *ngFor="let nowmovie of movieArray" (click)="Moviedetail(nowmovie)">
 
-    <div item-left>
-      <img src="{{imgPath + nowmovie.poster_path}}" style="display: block; width: 90px; height:120px; ">
-    </div>
-    <h2>{{nowmovie.title}}</h2>
-    <p>Release:{{nowmovie.release_date}}</p>
-  </ion-item>
+  <div item-left>
+    <img src="{{imgPath + nowmovie.poster_path}}" style="display: block; width: 90px; height:120px; ">
+  </div>
+  <ion-icon item-right name="arrow-dropright-circle"></ion-icon>
+  <h2>{{nowmovie.title}}</h2> 
+  <p>Release:{{nowmovie.release_date}}</p>
+</ion-item>
 
 </ion-content>

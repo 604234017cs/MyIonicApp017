@@ -7,20 +7,28 @@
 <ion-header>
   <ion-navbar>
     <ion-title text-center>{{detail.title}}</ion-title>
+    
   </ion-navbar>
 </ion-header>
 
 <ion-content padding>
+   
+    <ion-thumbnail  item-start> 
   <ion-item ><ion-avatar item-left>
-      
       <img src="{{imgPath + detail.poster_path}}">
   </ion-avatar><h2>{{detail.title}}</h2></ion-item>
+</ion-thumbnail >
+
     
   <img src="{{imgPath + detail.poster_path}}">
+  <button ion-button block icon-lef color="light"  (click)="openVideo(detail.id)" >Video Trailler</button>
+<button ion-button block icon-lef color="light"  (click)="talk(detail.overview)" >textOrOptions</button>
     <h2>Release Date</h2>
     <p>{{detail.release_date}}</p>
     <h2>Vote Average</h2>
     <p>{{detail.vote_average}}</p>
     <h2>Overview</h2>
     <p>{{detail.overview}}</p>
+
+    
 </ion-content>

@@ -42,4 +42,15 @@ searchMovie(query){
   return this.http.get(url);
 }
 
+getMovieDetails(movieID){
+  const url = this.baseURL + 'movie/' + movieID + '?' + this.apikey + '&language=en-US';
+  return this.http.get(url);
+} 
+
+getVideos(movieID){
+  const url = this.baseURL + 'movie/' + movieID + '/videos?' + this.apikey + '&language=en-US';
+  return this.http.get(url);
+}
+
+
 }

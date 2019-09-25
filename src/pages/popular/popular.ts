@@ -44,4 +44,15 @@ export class PopularPage {
     this.navCtrl.push(MovieAppPage);
   }
 
+  getItems(ev: any) {
+    //const val = ev.target.value;
+    let val = ev.target.value;
+    if (val != 0) {
+      this.popular.searchMovie(val).subscribe(movies => {
+        this.movieArray = movies['results'];
+      });
+    }else {
+      this.loadpopulardata();
+  }
+}
 }

@@ -1,3 +1,4 @@
+import { SocialSharing } from '@ionic-native/social-sharing';
 import { MovieAppPage } from './../pages/movie-app/movie-app';
 import {HttpClientModule} from '@angular/common/http/';
 import { JsonMenuPage } from './../pages/json-menu/json-menu';
@@ -18,7 +19,7 @@ import { SMS } from '@ionic-native/sms/ngx';
 import { BarcodeScanner } from '@ionic-native/barcode-scanner';
 import { Flashlight } from '@ionic-native/flashlight';
 import { MovieProvider } from '../providers/movie/movie';
-
+import { TextToSpeech } from '@ionic-native/text-to-speech';
 
 @NgModule({
   declarations: [
@@ -39,7 +40,7 @@ import { MovieProvider } from '../providers/movie/movie';
   ],
   providers: [
     StatusBar,SMS,BarcodeScanner,Flashlight,
-    SplashScreen,VideoPlayer,
+    SplashScreen,VideoPlayer,TextToSpeech,SocialSharing,
     {provide: ErrorHandler, useClass: IonicErrorHandler},
     MovieProvider
   ]

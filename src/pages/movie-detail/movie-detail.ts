@@ -1,6 +1,8 @@
 import { MovieProvider } from './../../providers/movie/movie';
 import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
+import { TextToSpeech } from '@ionic-native/text-to-speech';
+import { SocialSharing } from '@ionic-native/social-sharing';
 
 /**
  * Generated class for the MovieDetailPage page.
@@ -26,9 +28,13 @@ export class MovieDetailPage {
   status: any;
   revenue: any;
   imgPath = 'https://image.tmdb.org/t/p/original/';
+  playing: boolean;
+ 
   
  
-  constructor(public navCtrl: NavController, public navParams: NavParams, public moviedetail:MovieProvider) {
+  constructor(public navCtrl: NavController, public navParams: NavParams, 
+    public moviedetail:MovieProvider,private tts: TextToSpeech,
+    private socialSharing:SocialSharing) {
   }
 
   ionViewDidLoad() {
@@ -43,7 +49,25 @@ export class MovieDetailPage {
     this.navCtrl.push("VideoPage",key);
 }
 
- 
-
-
+talk(textOrOptions:string){
+  this.tts.speak(textOrOptions);
 }
+ 
+stop(){
+  this.tts.speak("").then((value)=>{
+  this.playing=false;
+  });
+  }
+  
+  shareFace(movie){
+    this.socialSharing.shareViaFacebook(movie.overview,movie.poster_path) 
+    .then(() =>{
+    console.log("Message sent");
+    this.moviedata = this.navParams.data;
+    }).catch((error) =>{
+    console.log("Fail posting");
+    })
+    }
+}
+
+

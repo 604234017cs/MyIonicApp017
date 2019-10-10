@@ -1,6 +1,5 @@
 import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
-import { VideoPlayer } from '@ionic-native/video-player';
 import { MovieProvider } from '../../providers/movie/movie';
 import {SafeResourceUrl, DomSanitizer} from '@angular/platform-browser';
 
@@ -22,7 +21,7 @@ export default class VideoPage {
   movie:any;
   url = 'https://www.youtube.com/watch?v=';
 
-  constructor(public navCtrl: NavController, public navParams: NavParams,private youtube: VideoPlayer,public nowmovie: MovieProvider,public sanitizer: DomSanitizer) {
+  constructor(public navCtrl: NavController, public navParams: NavParams,public nowmovie: MovieProvider,public sanitizer: DomSanitizer) {
   }
 
   ionViewDidLoad() {

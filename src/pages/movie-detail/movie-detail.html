@@ -22,7 +22,7 @@
     
   <img src="{{imgPath + detail.poster_path}}">
   <button ion-button block icon-lef color="light"  (click)="openVideo(detail.id)" >Video Trailler</button>
-<button ion-button block icon-lef color="light"  (click)="talk(detail.overview)" >textOrOptions</button>
+
 
     <h2>Release Date</h2>
     <p>{{detail.release_date}}</p>
@@ -30,10 +30,20 @@
     <p>{{detail.vote_average}}</p>
     <h2>Overview</h2>
     <p>{{detail.overview}}</p>
+
+    <button ion-button color="secondary" clear (click)="talk(detail.overview)"> 
+      <ion-icon name="mic"></ion-icon>
+      &nbsp; LISTEN
+    </button>
+    <button ion-button color="danger" clear (click)="stop(moviedata.overview)">
+      <ion-icon name="mic-off"></ion-icon> 
+      &nbsp; STOP
+    </button>
+    
     <ion-fab right bottom>
       <button ion-fab color="light"><ion-icon name="add"></ion-icon></button>
       <ion-fab-list side="left">
-        <button ion-fab><ion-icon name="logo-facebook"></ion-icon></button>
+        <button ion-fab (click) = "shareFace()" ><ion-icon name="logo-facebook"></ion-icon></button>
       </ion-fab-list>
     </ion-fab>
   

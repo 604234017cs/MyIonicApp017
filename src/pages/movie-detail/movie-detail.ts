@@ -33,7 +33,7 @@ export class MovieDetailPage {
   
  
   constructor(public navCtrl: NavController, public navParams: NavParams, 
-    public moviedetail:MovieProvider,private tts: TextToSpeech,
+    public moviedetail:MovieProvider,private ttr: TextToSpeech,
     private socialSharing:SocialSharing) {
   }
 
@@ -50,17 +50,20 @@ export class MovieDetailPage {
 }
 
 talk(textOrOptions:string){
-  this.tts.speak(textOrOptions);
+  this.ttr.speak(textOrOptions);
 }
  
+
 stop(){
-  this.tts.speak("").then((value)=>{
-  this.playing=false;
-  });
+  this.ttr.speak("")
+      .then(() => console.log('Success'))
+      .catch((reason: any) => {
+        return console.log(reason);
+      });
   }
   
-  shareFace(movie){
-    this.socialSharing.shareViaFacebook(movie.overview,movie.poster_path) 
+  shareFace(){
+    this.socialSharing.shareViaFacebook(this.detail.overview) 
     .then(() =>{
     console.log("Message sent");
     this.moviedata = this.navParams.data;
